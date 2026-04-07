@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="together">
+    
+    <!-- Floating Y translation -->
+    <objectAnimator
+        android:propertyName="translationY"
+        android:valueFrom="0"
+        android:valueTo="-12dp"
+        android:duration="1500"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite"
+        android:interpolator="@android:interpolator/fast_out_slow_in" />
+    
+    <!-- Subtle Z rotation for 3D effect -->
+    <objectAnimator
+        android:propertyName="rotationZ"
+        android:valueFrom="-2"
+        android:valueTo="2"
+        android:duration="3000"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite"
+        android:interpolator="@android:interpolator/sinusoidal" />
+    
+    <!-- Scale pulse -->
+    <objectAnimator
+        android:propertyName="scaleX"
+        android:valueFrom="1.0"
+        android:valueTo="1.02"
+        android:duration="1500"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite" />
+    
+    <objectAnimator
+        android:propertyName="scaleY"
+        android:valueFrom="1.0"
+        android:valueTo="1.02"
+        android:duration="1500"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite" />
+    
+    <!-- Shadow elevation change -->
+    <objectAnimator
+        android:propertyName="translationZ"
+        android:valueFrom="0"
+        android:valueTo="8dp"
+        android:duration="1500"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite" />
+</set>

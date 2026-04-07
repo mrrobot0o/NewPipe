@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 3D rotation on Y with perspective -->
+    <objectAnimator
+        android:propertyName="rotationY"
+        android:valueFrom="-15"
+        android:valueTo="0"
+        android:duration="400"
+        android:interpolator="@android:interpolator/fast_out_slow_in" />
+    
+    <!-- X translation for sliding -->
+    <objectAnimator
+        android:propertyName="translationX"
+        android:valueFrom="100dp"
+        android:valueTo="0"
+        android:duration="400"
+        android:interpolator="@android:interpolator/fast_out_slow_in" />
+    
+    <!-- Scale from back to front -->
+    <objectAnimator
+        android:propertyName="scaleX"
+        android:valueFrom="0.85"
+        android:valueTo="1.0"
+        android:duration="400" />
+    
+    <objectAnimator
+        android:propertyName="scaleY"
+        android:valueFrom="0.85"
+        android:valueTo="1.0"
+        android:duration="400" />
+    
+    <!-- Alpha fade -->
+    <objectAnimator
+        android:propertyName="alpha"
+        android:valueFrom="0.5"
+        android:valueTo="1.0"
+        android:duration="400" />
+    
+    <!-- Depth translation -->
+    <objectAnimator
+        android:propertyName="translationZ"
+        android:valueFrom="-50dp"
+        android:valueTo="0"
+        android:duration="400" />
+</set>
