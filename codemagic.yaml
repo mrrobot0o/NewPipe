@@ -6,22 +6,16 @@ workflows:
     name: NewPipe Android Build
     max_build_duration: 30
     environment:
-      android: default
       java: 17
-      groups:
-        - android
     scripts:
       - name: Install dependencies
         script: |
-          echo "Installing dependencies..."
           ./gradlew androidDependencies
       - name: Build debug APK
         script: |
-          echo "Building debug APK..."
           ./gradlew assembleDebug
       - name: Run tests
         script: |
-          echo "Running unit tests..."
           ./gradlew test || echo "Tests completed"
     artifacts:
       - app/build/outputs/apk/debug/*.apk
