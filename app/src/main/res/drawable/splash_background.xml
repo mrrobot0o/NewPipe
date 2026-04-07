@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:drawable="@color/light_youtube_primary_color"/>
-
+    <!-- Teresa Gradient Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:startColor="#FF6B9D"
+                android:centerColor="#9C5CE5"
+                android:endColor="#7C4DFF"
+                android:type="linear" />
+        </shape>
+    </item>
+    
+    <!-- Teresa Logo -->
     <item>
         <bitmap
-            android:src="@drawable/ic_newpipe_triangle_white"
-            android:gravity="center_vertical|center_horizontal" />
+            android:src="@drawable/ic_teresa_logo"
+            android:gravity="center" />
     </item>
 </layer-list>

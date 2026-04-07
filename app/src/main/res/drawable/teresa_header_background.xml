@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Teresa Gradient Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:startColor="#FF6B9D"
+                android:centerColor="#9C5CE5"
+                android:endColor="#7C4DFF"
+                android:type="linear" />
+        </shape>
+    </item>
+    
+    <!-- Decorative circles -->
+    <item
+        android:left="-50dp"
+        android:top="-50dp"
+        android:width="200dp"
+        android:height="200dp">
+        <shape android:shape="oval">
+            <solid android:color="#40FFFFFF" />
+        </shape>
+    </item>
+    
+    <item
+        android:right="-30dp"
+        android:bottom="-30dp"
+        android:width="150dp"
+        android:height="150dp">
+        <shape android:shape="oval">
+            <solid android:color="#30FFFFFF" />
+        </shape>
+    </item>
+</layer-list>
