@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base Dark Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#0D0D1A" />
+        </shape>
+    </item>
+    
+    <!-- Gradient Overlay -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:startColor="#15FF6B9D"
+                android:centerColor="#0D0D1A"
+                android:endColor="#107C4DFF"
+                android:type="linear"
+                android:useLevel="false" />
+        </shape>
+    </item>
+    
+    <!-- Noise texture overlay (subtle) -->
+    <item android:drawable="@android:color/transparent" />
+</layer-list>

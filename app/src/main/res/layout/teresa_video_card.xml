@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="@dimen/teresa_card_corner_radius"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/teresa_card_background">
+
+        <!-- Thumbnail -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/thumbnail_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/itemThumbnailView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:background="#333" />
+
+            <!-- Duration Badge -->
+            <TextView
+                android:id="@+id/itemDurationView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="6dp"
+                android:background="@drawable/teresa_duration_background"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                tools:text="12:34" />
+
+            <!-- Live Badge -->
+            <TextView
+                android:id="@+id/itemLiveView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="6dp"
+                android:background="@drawable/teresa_live_background"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="LIVE"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- Progress Overlay -->
+            <ProgressBar
+                android:id="@+id/itemProgressView"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:progressDrawable="@drawable/teresa_video_seekbar"
+                android:visibility="gone"
+                tools:progress="50" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Uploader Avatar -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/itemUploaderAvatarView"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/teresa_channel_card"
+            app:civ_border_color="#25FF6B9D"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/thumbnail_card"
+            tools:src="#555" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/itemVideoTitleView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/itemUploaderAvatarView"
+            app:layout_constraintTop_toBottomOf="@id/thumbnail_card"
+            tools:text="Video Title Goes Here" />
+
+        <!-- Uploader Name -->
+        <TextView
+            android:id="@+id/itemUploaderView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#80FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/itemUploaderAvatarView"
+            app:layout_constraintTop_toBottomOf="@id/itemVideoTitleView"
+            tools:text="Uploader Name" />
+
+        <!-- Views & Date -->
+        <TextView
+            android:id="@+id/itemAdditionalDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#60FFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/itemUploaderAvatarView"
+            app:layout_constraintTop_toBottomOf="@id/itemUploaderView"
+            tools:text="1.2M views • 2 days ago" />
+
+        <!-- Options Menu -->
+        <ImageButton
+            android:id="@+id/itemMoreOptions"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="4dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_more_vert"
+            android:tint="#60FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/thumbnail_card" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

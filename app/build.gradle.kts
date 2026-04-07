@@ -246,6 +246,9 @@ dependencies {
     implementation(libs.androidx.work.rxjava3)
     implementation(libs.google.android.material)
     implementation(libs.androidx.webkit)
+    
+    /** Teresa - Lottie Animations **/
+    implementation("com.airbnb.android:lottie:6.4.0")
 
     // Coroutines interop
     implementation(libs.kotlinx.coroutines.rx3)
