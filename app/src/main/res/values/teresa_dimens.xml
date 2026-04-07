@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Teresa Card Dimensions -->
+    <dimen name="teresa_card_corner_radius">16dp</dimen>
+    <dimen name="teresa_card_elevation">8dp</dimen>
+    <dimen name="teresa_card_margin">8dp</dimen>
+    <dimen name="teresa_card_padding">12dp</dimen>
+    
+    <!-- Teresa Button Dimensions -->
+    <dimen name="teresa_button_corner_radius">24dp</dimen>
+    <dimen name="teresa_button_height">48dp</dimen>
+    <dimen name="teresa_button_padding_horizontal">24dp</dimen>
+    
+    <!-- Teresa FAB Dimensions -->
+    <dimen name="teresa_fab_size">56dp</dimen>
+    <dimen name="teresa_fab_margin">16dp</dimen>
+    <dimen name="teresa_mini_fab_size">40dp</dimen>
+    
+    <!-- Teresa Corner Radius Options -->
+    <dimen name="teresa_corner_small">8dp</dimen>
+    <dimen name="teresa_corner_medium">16dp</dimen>
+    <dimen name="teresa_corner_large">24dp</dimen>
+    <dimen name="teresa_corner_xl">32dp</dimen>
+    
+    <!-- Teresa Player Dimensions -->
+    <dimen name="teresa_player_control_size">48dp</dimen>
+    <dimen name="teresa_seekbar_height">4dp</dimen>
+    <dimen name="teresa_seekbar_thumb_size">20dp</dimen>
+    
+    <!-- Teresa Typography -->
+    <dimen name="teresa_text_size_title">20sp</dimen>
+    <dimen name="teresa_text_size_subtitle">14sp</dimen>
+    <dimen name="teresa_text_size_caption">12sp</dimen>
+    <dimen name="teresa_text_size_button">14sp</dimen>
+    
+    <!-- Teresa Spacing -->
+    <dimen name="teresa_spacing_xs">4dp</dimen>
+    <dimen name="teresa_spacing_sm">8dp</dimen>
+    <dimen name="teresa_spacing_md">16dp</dimen>
+    <dimen name="teresa_spacing_lg">24dp</dimen>
+    <dimen name="teresa_spacing_xl">32dp</dimen>
+    
+    <!-- Teresa Mini Player -->
+    <dimen name="teresa_mini_player_height">64dp</dimen>
+    <dimen name="teresa_mini_player_corner">24dp</dimen>
+    
+    <!-- Teresa Bottom Sheet -->
+    <dimen name="teresa_bottom_sheet_corner">20dp</dimen>
+    <dimen name="teresa_bottom_sheet_handle_width">32dp</dimen>
+    <dimen name="teresa_bottom_sheet_handle_height">4dp</dimen>
+</resources>
