@@ -6,62 +6,22 @@ workflows:
     name: NewPipe Android Build
     max_build_duration: 30
     environment:
+      android: default
+      java: 17
       groups:
         - android
-      vars:
-        JAVA_HOME: /opt/jdk-17
-        GRADLE_USER_HOME: /tmp/gradle
     scripts:
       - name: Install dependencies
         script: |
           echo "Installing dependencies..."
-          cd $CM_BUILD_DIR
           ./gradlew androidDependencies
       - name: Build debug APK
         script: |
           echo "Building debug APK..."
-          cd $CM_BUILD_DIR
           ./gradlew assembleDebug
-      - name: Build release APK
-        script: |
-          echo "Building release APK..."
-          cd $CM_BUILD_DIR
-          ./gradlew assembleRelease
       - name: Run tests
         script: |
           echo "Running unit tests..."
-          cd $CM_BUILD_DIR
           ./gradlew test || echo "Tests completed"
     artifacts:
-      - name: debug-apk
-        path: app/build/outputs/apk/debug/*.apk
-      - name: release-apk
-        path: app/build/outputs/apk/release/*.apk
-
-  android-release-workflow:
-    name: NewPipe Release Build
-    max_build_duration: 45
-    environment:
-      groups:
-        - android
-        - keystore
-      vars:
-        JAVA_HOME: /opt/jdk-17
-        GRADLE_USER_HOME: /tmp/gradle
-        CM_KEYSTORE_PATH: $CM_BUILD_DIR/keystore.jks
-    triggering:
-      events:
-        - push
-      branch_patterns:
-        - master
-        - dev
-        - release/*
-    scripts:
-      - name: Build signed release APK
-        script: |
-          echo "Building signed release APK..."
-          cd $CM_BUILD_DIR
-          ./gradlew assembleRelease
-    artifacts:
-      - name: signed-release-apk
-        path: app/build/outputs/apk/release/*.apk
+      - app/build/outputs/apk/debug/*.apk
