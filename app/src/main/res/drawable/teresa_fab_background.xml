@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <!-- Shadow -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#157C4DFF" />
+                    <padding android:bottom="4dp" />
+                </shape>
+            </item>
+            <!-- Gradient FAB -->
+            <item>
+                <shape android:shape="oval">
+                    <gradient
+                        android:angle="135"
+                        android:startColor="#FF6B9D"
+                        android:endColor="#7C4DFF"
+                        android:type="linear" />
+                    <size android:width="56dp" android:height="56dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
